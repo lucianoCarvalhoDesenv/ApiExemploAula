@@ -10,13 +10,34 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiAula.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230519002324_Initial")]
-    partial class Initial
+    [Migration("20230529224142_migracaoAula1")]
+    partial class migracaoAula1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
+
+            modelBuilder.Entity("ApiAula.Entidades.Aluno", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Nota")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroFaltas")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Alunos");
+                });
 
             modelBuilder.Entity("ApiAula.Entidades.Produto", b =>
                 {

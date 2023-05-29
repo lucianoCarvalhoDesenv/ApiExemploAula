@@ -16,6 +16,27 @@ namespace ApiAula.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
 
+            modelBuilder.Entity("ApiAula.Entidades.Aluno", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Nota")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("NumeroFaltas")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Alunos");
+                });
+
             modelBuilder.Entity("ApiAula.Entidades.Produto", b =>
                 {
                     b.Property<int>("Id")
