@@ -6,5 +6,6 @@
         public string Nome { get; set; }
         public float Nota { get; set; }
         public int NumeroFaltas { get; set; }
+        public bool? EstaAprovado { get; set; } = null;
     }
 }
