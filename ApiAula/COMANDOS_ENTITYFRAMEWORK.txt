@@ -8,10 +8,15 @@ Update-Database (Aplica arquivo de migration gerado)
 ------------------------------------------------------------
 Add-Migration {MigrationName} -Context ApplicationDbContext 
 
- EX: Add-Migration Initial2 -Context ApplicationDbContext
+ EX: 
+ 
+ Add-Migration Initial2 -Context ApplicationDbContext 
+ 
 (gera arquivo de migração para visualizacao)
 
-Update-Database (Aplica arquivo de migration gerado)
+Update-Database 
+
+(Aplica arquivo de migration gerado)
 ------------------------------------------------------------------
 
 Update-Database (Aplica arquivo de migration gerado)

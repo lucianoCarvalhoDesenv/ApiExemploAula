@@ -7,7 +7,8 @@ namespace ApiAula
     {
         //Add DBSET
         //Ex: public DbSet<ClassType> DbSetName { get; set; }
-        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Aluno> Alunos { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
